@@ -15,11 +15,21 @@ testWebP(function (support) {
 });
 
 
+
+
 jQuery(function ($) {
 	$(document).ready(function () {
 
-
-
+		$('.arrow-up').on('click', function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			var winHeight = $(document).height();
+			var step = 12;
+			var timeToScroll = winHeight / step;
+			$('html, body').stop().animate({
+				scrollTop: 0
+			}, timeToScroll);
+		});
 	});
 
 });
