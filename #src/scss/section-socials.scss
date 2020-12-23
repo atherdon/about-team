@@ -1,0 +1,36 @@
+.socials {
+	width: 100%;
+	min-height: 186px;
+	background-color: $green;
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		min-height: 186px;
+
+		@media only screen and (max-width: 976px) {
+			padding: 20px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		overflow: hidden;
+		margin: 0 10px;
+		border-radius: 50%;
+		width: 86px;
+		height: 86px;
+		background-color: $black;
+
+
+		img {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			max-width: 52px;
+			transform: translate(-50%, -50%);
+		}
+	}
+}

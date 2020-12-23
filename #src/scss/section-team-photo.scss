@@ -1,0 +1,112 @@
+.team-photo {
+	padding-bottom: 160px;
+	width: 100%;
+	background-color: $white;
+
+	&__content {
+		padding-top: 150px;
+
+		@media only screen and (max-width: 1000px) {
+			padding-top: 40px;
+		}
+	}
+
+	@media only screen and (max-width: 1000px) {
+		padding-bottom: 40px;
+	}
+}
+
+.lead,
+.employee {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 60px;
+		width: 45%;
+	}
+
+	&__item-photo {
+		position: relative;
+
+		.photo-hover {
+			position: absolute;
+			top: 0;
+			display: none;
+			background-color: $white;
+		}
+
+		img {
+			width: 450px;
+
+			@media only screen and (max-width: 1000px) {
+				width: 150px;
+			}
+		}
+
+		&:hover {
+			.photo-hover {
+				display: block;
+			}
+		}
+	}
+
+	&__item-info {
+		text-align: center;
+		text-transform: uppercase;
+		color: $mine-shaft;
+
+		.name {
+			font-family: "sf-pro-light";
+			font-size: 25px;
+			line-height: 1.5em;
+
+			@media only screen and (max-width: 500px) {
+				font-size: 14px;
+			}
+		}
+
+		.surname,
+		.position {
+			font-family: "sf-pro-heavy";
+		}
+
+		.position {
+			font-size: 15px;
+			line-height: 1.5em;
+
+			@media only screen and (max-width: 500px) {
+				font-size: 10px;
+			}
+		}
+	}
+}
+
+.employee {
+	justify-content: center;
+
+	&__item {
+		margin: 0 20px 60px;
+		width: 29%;
+
+		@media only screen and (max-width: 1000px) {
+			margin: 0 0 60px;
+			width: 45%;
+		}
+	}
+
+	&__item-photo {
+		img {
+			width: 300px;
+		}
+	}
+
+	@media only screen and (max-width: 1000px) {
+		justify-content: space-between;
+	}
+}
